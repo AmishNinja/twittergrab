@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag "main" %>
+<h1>TweetGrab</h1>
+Give me a tweet ID to snag!
+<p id="notice" class="error"><%= flash[:notice] %></p>
+<%= form_tag("/fetch") do %>
+	<%= text_field_tag 'tweet_id' %>
+	<%= submit_tag("Do It!") %>
+<% end %>
